@@ -8,16 +8,15 @@ import (
 	"os"
 	"strconv"
 	"strings"
-	"time"
 )
 
 func main() {
 	//fmt.Println(rand.Intn(100) + 1)
 	/* using rand.Intn(100) + 1 is a way to generate a random integer between 1 and 100, whereas using rand.Intn(101) generates a random integer between 0 and 100. _chatGPT*/
-	seconds := time.Now().Unix()
+	//seconds := time.Now().Unix()
 	//fmt.Println(time.Now())
 	//fmt.Println(seconds)
-	rand.Seed(seconds)
+	//rand.Seed(seconds)
 	target := rand.Intn(100) + 1
 	fmt.Println("I've chosen a random number between 1 and 100.")
 	fmt.Println("Can you guess it?")
@@ -42,9 +41,9 @@ func main() {
 
 		if guess < target {
 			fmt.Println("Your guess was lOW.")
-		} else if guess > target && guesses != 0 {
+		} else if guess > target {
 			fmt.Println("Your guess was HIGH.")
-		} else {
+		} else if guess == target {
 			fmt.Println("Good job! You guessed it!")
 			break
 		}
