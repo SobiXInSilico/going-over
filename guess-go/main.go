@@ -40,7 +40,7 @@ func main() {
 		}
 
 		if guess < target {
-			fmt.Println("Your guess was lOW.")
+			fmt.Println("Your guess was LOW.")
 		} else if guess > target {
 			fmt.Println("Your guess was HIGH.")
 		} else if guess == target {
