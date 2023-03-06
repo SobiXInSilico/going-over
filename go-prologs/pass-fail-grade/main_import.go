@@ -3,7 +3,7 @@ package main
 
 import (
 	"fmt"
-	"keyboard"
+	"github.com/SicilianSilicon/going-over/tree/main/go-prologs/keyboard"
 	"log"
 )
 
