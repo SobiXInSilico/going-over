@@ -1,5 +1,5 @@
 //Package keyboard reads user input from the keyboard.
-//Package comments should begin with “Package” followed by the package name.
+//Doc comments should begin with “Package” followed by the package name.
 
 package keyboard
 
