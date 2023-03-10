@@ -1,5 +1,4 @@
 //Package keyboard reads user input from the keyboard.
-//Doc comments should begin with “Package” followed by the package name.
 
 package keyboard
 
@@ -10,7 +9,7 @@ import (
 	"strings"
 )
 
-// Function comments should begin with the name of the function they describe:
+// Function comments should begin with the name of the function they describe.W
 // GetFloat reads a floating-point number from the keyboard.
 // It returns the number read and any error encountered.
 func GetFloat() (float64, error) {
