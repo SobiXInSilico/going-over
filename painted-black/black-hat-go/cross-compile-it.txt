@@ -1,0 +1,18 @@
+> uname -all
+    Linux HOSTNAME 5.19.0-35-generic #36~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Fri Feb 17 15:17:25 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+
+GOOS="windows" GOARCH="amd64" go build -o main.exe main.go
+   > file main.exe
+     main.exe: PE32+ executable (console) x86-64 (stripped to external PDB), for MS Windows
+
+go build main.go
+    > file main
+    main: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked, Go BuildID=VXmtEFlVS6R6YTHZ06fi/A5-defU3rMO7i1QH13k-/KuGQA8UbRKPKgAAnPh0T/HvYblB2ddKThaM2QlSRt, with debug_info, not stripped
+
+go build -ldflags "-w -s" -o main2 main.go
+    > file main2
+    main2: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked, Go BuildID=y90bSQlcoOzTPV9RIbjD/LidpCeCYx9NRohmvWH-j/KuGQA8UbRKPKgAAnPh0T/DjQU_u5OJeSUiDL0Vyyy, stripped
+
+To cross-compile, you need to set a constraint. This is just a means to pass information to the build command about the operating system and architecture for which you’d like to compile your code. These constraints include GOOS (for the operating system) and GOARCH (for the architecture). You can introduce build constraints in three ways: via the command line, code comments, or a file suffix naming convention. We’ll discuss the command line method here and leave the other two methods for you to research if you wish.
+
+The cross-compilation process is much simpler in Go than in just about any other modern programming language. The only real “gotcha” happens when you try to cross-compile applications that use native C bindings. We’ll stay out of the weeds and let you dig into those challenges independently.Depending on the packages you import and the projects you develop, you may not have to worry about that very often.
