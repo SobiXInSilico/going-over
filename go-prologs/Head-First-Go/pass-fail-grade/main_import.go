@@ -3,7 +3,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/SicilianSilicon/going-over/go-prologs/keyboard"
+	"github.com/SicilianSilicon/going-over/go-prologs/Head-First-Go/keyboard"
 	"log"
 )
 
