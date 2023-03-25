@@ -1,3 +1,3 @@
-module github.com/SicilianSilicon/going-over/go-prologs/Head-First-Go/keyboard
+module keyboard.go
 
 go 1.20
