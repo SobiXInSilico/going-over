@@ -1,3 +1,3 @@
-module strings.go
+module datafile.go
 
 go 1.20
