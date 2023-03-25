@@ -4,7 +4,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/SicilianSilicon/going-overn/go-prologs/Head-First-Go/datafile"
+	"github.com/SicilianSilicon/going-over/go-prologs/Head-First-Go/datafile"
 	"log"
 )
 
