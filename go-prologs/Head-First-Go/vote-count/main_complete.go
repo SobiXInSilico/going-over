@@ -18,7 +18,18 @@ func main() {
 	counts := make(map[string]int)
 	for _, line := range lines {
 		counts[line]++
-		println(counts[line])
 	}
-	fmt.Println(counts)
+	/* for name, count := range counts {
+	// 	fmt.Printf("Votes for %s : %d\n", name, count)
+	} */
+	//get all names in alphabetical order
+	names := make([]string, 0, len(counts))
+	for name := range counts {
+		names = append(names, name)
+	}
+	// print the vote counts for each candidate in alphabetical order
+	for _, name := range names {
+		count := counts[name]
+		fmt.Printf("Votes for %s : %d\n", name, count)
+	}
 }

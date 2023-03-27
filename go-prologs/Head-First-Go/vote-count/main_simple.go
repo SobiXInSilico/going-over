@@ -4,8 +4,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/SicilianSilicon/going-over/go-prologs/Head-First-Go/datafile"
 	"log"
+	"reflect"
+
+	"github.com/SicilianSilicon/going-over/go-prologs/Head-First-Go/datafile"
 )
 
 func main() {
@@ -13,5 +15,6 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+	fmt.Println("\n", reflect.TypeOf(lines), ":")
 	fmt.Println(lines)
 }
