@@ -1,5 +1,4 @@
-// count tallies the number of times each line
-// occurs within a file
+// count tallies the number of times each lines occurs within a file
 package main
 
 import (
